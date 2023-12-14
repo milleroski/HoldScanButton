@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("A mod which allows you to hold the scan button instead of needing to spam it.")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+80eb7763c4250b1a7309cc305236dfc039e1464a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3dc160dbafaef7cbdaccf39a18f06a52f96933d8")]
 [assembly: System.Reflection.AssemblyProductAttribute("HoldScanButton")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HoldScanButton")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

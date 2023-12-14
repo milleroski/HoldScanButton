@@ -37,12 +37,12 @@ namespace HoldScanButton.Patches
             }
         }
 
-        // Disable the PingScan_performed method completely.
-        [HarmonyPatch(typeof(HUDManager), "PingScan_performed")]
-        [HarmonyPrefix]
-        static bool PingScanPatch(HUDManager __instance)
-        {
-            return false;
-        }
+        //// Disable the PingScan_performed method completely.
+        //[HarmonyPatch(typeof(HUDManager), "PingScan_performed")]
+        //[HarmonyPrefix]
+        //static bool PingScanPatch(HUDManager __instance)
+        //{
+        //    return false;
+        //}
     }
 }
