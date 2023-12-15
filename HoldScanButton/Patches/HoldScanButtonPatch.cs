@@ -1,40 +1,31 @@
 ﻿using HarmonyLib;
+using System.Reflection;
+using UnityEngine.InputSystem;
 
 namespace HoldScanButton.Patches
 {
 
     internal class HoldScanButtonPatch
     {
+        static InputAction.CallbackContext pingContext;
 
         [HarmonyPatch(typeof(HUDManager), "Update")]
-        [HarmonyPrefix]
+        [HarmonyPostfix]
         static void UpdatePatch(HUDManager __instance)
         {
-            // This is simple. Instead of using PingScan_performed method, just trigger the same function but without the callback IF the PingScan button is pressed.
+            // If the PingScan button is pressed, call the PingScan_performed function with our captured context
             if (IngamePlayerSettings.Instance.playerInput.actions.FindAction("PingScan").IsPressed())
             {
-                ScanButtonHeld(__instance);
+                __instance.PingScan_performed(pingContext);
             }
         }
-        
-        // Just run the same code as the PingScan_performed method but without the CallbackContext parameter.
-        private static void ScanButtonHeld(HUDManager __instance)
+
+        // Patch the HudManager.PingScan_performed function so we can capture the context for future reuse
+        [HarmonyPatch(typeof(HUDManager), "PingScan_performed")]
+        [HarmonyPrefix]
+        static void OnScan(HUDManager __instance, InputAction.CallbackContext context)
         {
-            if (GameNetworkManager.Instance.localPlayerController == null)
-            {
-                return;
-            }
-            if (!__instance.CanPlayerScan())
-            {
-                return;
-            }
-            if (__instance.playerPingingScan <= -1f)
-            {
-                __instance.playerPingingScan = 0.3f;
-                __instance.scanEffectAnimator.transform.position = GameNetworkManager.Instance.localPlayerController.gameplayCamera.transform.position;
-                __instance.scanEffectAnimator.SetTrigger("scan");
-                __instance.UIAudio.PlayOneShot(__instance.scanSFX);
-            }
+            pingContext = context;
         }
 
         //// Disable the PingScan_performed method completely.
