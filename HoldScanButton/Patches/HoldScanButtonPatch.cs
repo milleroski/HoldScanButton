@@ -1,5 +1,4 @@
-﻿using HarmonyLib;
-using System.Reflection;
+using HarmonyLib;
 using UnityEngine.InputSystem;
 
 namespace HoldScanButton.Patches
