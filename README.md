@@ -14,7 +14,7 @@ This mod is completely client side, so no one else needs to install it besides t
 
 ## Compatibility
 
-This mod should be now fully compatible with all the other scan mods out there and never break, if it does I won't provide support or update the mod as I'm not the original maintainer. You can find the original Github here. https://github.com/milleroski/HoldScanButton
+This mod should be fully compatible with all the other scan mods out there and never break, if it does I won't provide support or update the mod as I'm not the original maintainer. You can find the original Github here. https://github.com/milleroski/HoldScanButton
 
 ## Credits
 All credits go to FutureSavior for originally making the mod ^^
