@@ -1,9 +1,9 @@
 # Hold scan button
-This is a reupload of Hold Scan Button originally developed by FutureSavior, the original mod was deprecated and I wanted people to still be able to access it.
+This mod allows you to hold the scan button to continuously keep scanning instead of having to spam the button.
 
 ## Installation guide
 
-Install this like any other BepInEx mod, either manually or with Gale / R2/Thunderstore Mod Manager.
+Install this like any other BepInEx mod, either manually of with r2modman / Thunderstore.
 
 When installing manually, install the mod in the following directory:
 ```
@@ -14,7 +14,13 @@ This mod is completely client side, so no one else needs to install it besides t
 
 ## Compatibility
 
-This mod should be fully compatible with all the other scan mods out there and never break, if it does I won't provide support or update the mod as I'm not the original maintainer. You can find the original Github here. https://github.com/milleroski/HoldScanButton
+This mod should be now fully compatible with all the other scan mods out there. I want to give a big shoutout to **NikolaTeslaX**, who contacted me with a solution for the compatibility problem that the previous versions of this mod had, he did all the work for this one.
+
+## FAQ
+
+### I found a bug / compatibility issue, where can I report this?
+
+You can create an issue on my GitHub page linked at the very top, go to the #mod-releases forum on the community discord server (https://discord.gg/lethal-company), or just DM me on Discord (nickname: futuresavior).
 
 ## Credits
-All credits go to FutureSavior for originally making the mod ^^
+Thank you to rainycake for the idea and ashy!! for helping me figure out how to access the state of the input button. Thank you to Nebby for pointing out a compatibility issue that this mod causes. Again, BIG thank you to NikolaTeslaX for solving the compatibility issue. Also thank you to Lunxara and Robyn for updating the mod so it's up to the latest standard.
